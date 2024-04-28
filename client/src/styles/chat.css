@@ -1,0 +1,185 @@
+:root {
+  --width-backgrond: 2000px;
+  letter-spacing: 1px;
+}
+
+
+
+.header {
+  height: 45px;
+  background-color: rgba(24,24,24,255);
+  border-color: rgba(40,40,40,255);
+  display: flex;
+}
+
+.header > .button {
+  line-height: 50px;
+  padding: 0px 30px;
+  border: 1px solid;
+  border-color: rgba(40,40,40,255);
+  background-color: rgba(24,24,24,255);
+  font-size: 14px;
+}
+
+.header > .clickButton {
+  border-left: 1px solid rgba(40,40,40,255);
+  border-right: 1px solid rgba(40,40,40,255);
+  border-top: 2px solid  rgba(11,101,170,255);
+  border-bottom: 0px solid;
+  background-color: rgba(31,31,31,255);
+  line-height: 50px;
+  padding: 0px 30px;
+  font-size: 14px;
+}
+
+.header > button:hover {
+  background-color:rgba(31,31,31,255);
+}
+
+.allFilePart {
+  color: rgba(128,140,148,255);
+}
+
+.dmFilePart {
+  color: rgba(205,179,113,255);
+}
+
+.allPart {
+  color: rgba(223,101,42,255);
+  letter-spacing: 2px;
+  padding-right: 8px;
+}
+
+.dmPart {
+  color: rgba(203,203,65,255);
+  font-weight: 700;
+  letter-spacing: -1px;
+  padding-right: 8px;
+}
+
+
+
+.backgrond {
+  width: var(--width-backgrond);
+  height: 1000px;
+  background-color: rgba(31,31,31,255);
+  color: rgba(125,127,128,255);
+  position: relative;
+}
+
+.tagPart {
+  color: rgba(55,125,193,255);
+}
+
+.attributePart {
+  color: rgba(156,220,254,255);
+}
+
+.functionPart {
+  color: rgba(220,219,168,255);
+}
+
+.classPart {
+  color: rgba(78,201,176,255);
+}
+
+.bracketPart {
+  color: rgba(253,214,0,255);
+}
+
+.marksPart {
+  color: rgba(203,202,203,255);
+}
+
+.attributeValuePart {
+  color: rgb(198,145,118);
+}
+
+.annotationPart {
+  color: rgb(101,150,79);
+}
+
+
+
+.terminarPart {
+  height: 25px;
+  line-height: 25px;
+  color: rgba(204,204,204,255);
+  background-color: rgba(45,45,45,255);
+}
+
+.terminar-button {
+  line-height: 40px;
+  padding: 0px 30px;
+  border: none;
+  outline: none;
+  background-color: rgba(24,24,24,255);
+  font-size: 14px;
+  color: rgba(142,142,143,255);
+}
+
+.terminar-clickButton {
+  line-height: 40px;
+  padding: 0px 30px;
+  border: none;
+  outline: none;
+  background-color: rgba(24,24,24,255);
+  font-size: 14px;
+  color: rgba(185,185,185,255);
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-color: rgba(6,96,165,255);
+}
+
+.terminar-button:hover {
+  color: rgba(185,185,185,255);
+}
+
+
+.pathPart {
+  color: rgba(204,204,204,255);
+}
+
+.commandPart {
+  color: rgba(222,235,66,255);
+}
+
+
+
+.chat-container {
+  padding: 0px 0px 0px 20px;
+}
+
+.console-container {
+  padding: 0px 0px 0px 20px;
+}
+
+
+
+.backgrond .terminar-container {
+  width: var(--width-backgrond);
+  height: 200px;
+  background-color: rgba(24,24,24,255);
+  position: fixed;
+  top: 1000px;
+}
+
+
+
+.backgrond .terminar-container .input-container {
+  width: var(--width-backgrond);
+  background-color: rgba(24,24,24,255);
+  display: inline-block;
+}
+
+.backgrond .terminar-container .input-container > input {
+  background-color: rgba(24,24,24,255); 
+  color: rgba(204,204,204,255);
+  border: none;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.backgrond .terminar-container .input-container > input::placeholder {
+  color: rgb(150, 150, 150);
+}
