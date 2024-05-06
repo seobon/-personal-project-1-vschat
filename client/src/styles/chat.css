@@ -91,6 +91,13 @@
   color: rgba(203,202,203,255);
 }
 
+.marks-button {
+  /* border: none; */
+  outline: none;
+  background-color: rgba(31,31,31,255);
+  color: rgba(203,202,203,255);
+}
+
 .attributeValuePart {
   color: rgb(198,145,118);
 }
