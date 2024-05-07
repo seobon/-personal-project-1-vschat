@@ -1,5 +1,5 @@
 import "../styles/chat.css";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useRef, useEffect, useMemo, useState } from "react";
 import Header from "../components/Header";
 import OwnerNotice from "../components/OwnerNotice";
 import CheckField from "../components/CheckField";
@@ -17,11 +17,13 @@ export default function SignUp() {
   const [ownerNotices, setOwnerNotices] = useState([]);
   const [idInput, setIdInput] = useState("");
   const [pwInput, setPwInput] = useState("");
+  const inputRef = useRef(null);
 
   useEffect(() => {
     const ownerNoticeArray = [
       "이 곳은 회원가입 페이지입니다.",
-      "회원가입을 위해 INPUT FIELD에 아이디를 입력해주세요."
+      "회원가입을 위해 INPUT FIELD에 아이디를 입력해주세요.",
+      "ID, Password 수정을 원하시면 INPUT FIELD 위에 EDIT을 사용하세요."
     ];
 
     const timer = setInterval(() => {
@@ -53,15 +55,15 @@ export default function SignUp() {
   };
 
   const editId = () => {
-    // setIdInput(msgInput);
-    // setMsgInput("")
-    console.log("???")
+    setMsgInput(idInput);
+    setIdInput("");
+    inputRef.current.focus();
   };
 
   const editPw = () => {
-    // setPwInput(msgInput);
-    // setMsgInput("")
-    console.log("!!!")
+    setMsgInput(pwInput);
+    setPwInput("");
+    inputRef.current.focus();
   };
 
   const renderInputField = (pathPart, onKeyDown) => {
@@ -70,6 +72,7 @@ export default function SignUp() {
           <span className="pathPart">C:\Hey\Users\Enter\Your\{pathPart}&gt; </span>
           <span className="commandPart"> here </span>
           <input
+            ref={inputRef}
             placeholder={`Write\\Your\\${pathPart}`}
             type={msgInput === msgInput ? "text" : "password"}
             value={msgInput}
@@ -92,29 +95,24 @@ export default function SignUp() {
             <div className="sentence">
             {ownerNotices.map((message, index) => (
               <OwnerNotice key={index} message={message}/>
-            ))};
+            ))}
             
               {/* {renderCheckField("id", idInput)}
               {renderCheckField("password", pwInput)} */}
 
               {idInput !== "" ? (
-                  <div>
+                  <>
                     <CheckField what={"id"} message={idInput}/>
-                      &lt;
-                      <span className="tagPart">button</span>
-                      &gt;
-                      <button className="marks-button">ID 수정하기</button>
-                      &lt;
-                      <span className="tagPart">button</span>
-                      /&gt;
-                  </div>
+                  </>
                 ) : (
                   <></>
                 )
               }
 
               {pwInput !== "" ? (
-                  <CheckField what={"password"} message={pwInput}/>
+                  <>
+                    <CheckField what={"password"} message={pwInput}/>
+                  </>
                 ) : (
                   <></>
                 )
